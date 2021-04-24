@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
-import SampleTable from './custom_components/SampleTable';
+import AlumniTable from './custom_components/AlumniTable';
 import AchievementView from './custom_components/AchievementView';
 // Create styles
 const styles = StyleSheet.create({
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   }, Achievements: {
         color: "red",
         fontSize: "30px",
-        fontWeight: "bold"
+        fontWeight: "bold",
   }
 });
 class NewsLetter extends Component {
@@ -28,16 +28,13 @@ class NewsLetter extends Component {
                         <AchievementView />
                     </View>
                     <View style={styles.section}>
-                        <Text>Section #2</Text>
-                        <SampleTable/>
+                        <Text style = {styles.Achievements}>Alumni Information</Text>
+                        <AlumniTable/>
                     </View>
                 </Page>
-                <Page size="A4" style={styles.page}>
+                <Page>
                     <View style={styles.section}>
-                        <Text>Section #Image</Text>
-                    </View>
-                    <View style={styles.section}>
-                        <Text>Section #2</Text>
+                        <Text style = {styles.Achievements}>Expert Lectures Delivered by Faculty members</Text>
                     </View>
                 </Page>
             </Document>
