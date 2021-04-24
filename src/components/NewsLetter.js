@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
 import AlumniTable from './custom_components/AlumniTable';
 import AchievementView from './custom_components/AchievementView';
+import LectureView from './custom_components/LectureView';
 // Create styles
 const styles = StyleSheet.create({
   page: {
@@ -35,6 +36,7 @@ class NewsLetter extends Component {
                 <Page>
                     <View style={styles.section}>
                         <Text style = {styles.Achievements}>Expert Lectures Delivered by Faculty members</Text>
+                        <LectureView />
                     </View>
                 </Page>
             </Document>
